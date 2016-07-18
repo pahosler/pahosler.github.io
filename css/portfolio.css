@@ -1,0 +1,143 @@
+body {
+	/* whitesmoke */
+	background-color: #f5f5f5 !important
+}
+
+#main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+nav {
+	max-width: 900px;
+	margin-bottom: 0 !important;
+	border-radius: 0 !important;
+	z-index: 1;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
+.affix {
+	top: 0;
+	width: 100%;
+}
+
+.affix+.container-fluid {
+	padding-top: 0px;
+}
+
+.noDecoration {
+	text-decoration: none;
+	color: #000;
+}
+
+.shadowText1 {
+	color: white;
+	text-shadow: -2px 2px black;
+}
+
+.colorUgly {
+	/* Pantone 448C Opaque Couché voted ugliest color in the world! */
+	background-color: #4A412A;
+}
+
+.font1 {
+	font-family: Croissant One;
+}
+
+.font2 {
+	font: 68px/80px Calligraffitti, serif;
+}
+
+.banner {
+	max-width: 900px;
+	height: 120px; //
+	background-color: whitesmoke;
+	color: white;
+}
+
+p {
+	max-width: 770px;
+	margin: auto;
+	padding: 10px;
+}
+
+/*  thumbnail {
+  margin: 5px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 50%;
+}
+*/
+.sideNav {
+	margin: 0 auto;
+	height: 300px; //
+	background-color: #1E90FF;
+}
+
+.works {
+	margin: 10px auto;
+	padding-bottom: 20px;
+	max-width: 550px;
+	max-height: 250px;
+	min-height: 250px;
+}
+
+.carousel-indicators .active {
+	border-color: whitesmoke !important;
+	background-color: black !important;
+	box-shadow: inset 1px 1px 1px 1px rgba(250, 250, 250, 0.5);
+}
+
+.carousel-indicators li {
+	border-color: black !important;
+	box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.about { //
+	background-color: blue;
+	margin: -1px auto;
+	padding: 10px; //
+	height: 300px;
+}
+
+p.about {
+	margin: -1px auto;
+	padding: 10px; //
+	background-color: lightblue; //
+	color: blue;
+	font: 16px/20px Georgia, serif;
+	text-align: left;
+}
+
+#mail { 
+	// background-color: blue;
+	margin: -1px auto; //
+	padding: 10px; //
+	max-width: 550px;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #000000;
+	margin: 10px auto;
+	padding: 10px;
+	color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+	.sideNav {
+		margin: -1px auto; //
+		background-color: lightblue;
+		height: 0px;
+	}
+	.about {
+		margin: -1px auto;
+		height: auto;
+	}
+	#mail { 
+	// background-color: blue;
+	margin: -1px auto; 
+	padding: 10px;
+	max-width: 550px;
+	height: auto;
+}
+}
