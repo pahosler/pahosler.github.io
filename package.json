@@ -1,7 +1,7 @@
 {
   "name": "pahosler.github.io",
   "version": "0.1.0",
-  "homepage": "https://pahosler.github.io",
+  "homepage": "https://github.com/pahosler/pahosler.github.io",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
