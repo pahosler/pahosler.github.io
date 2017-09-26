@@ -7,6 +7,7 @@ export default function AboutSeparator(props) {
     backgroundAttachment: 'fixed',
     backgroundPosition: '50% 0',
     backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
     height: '450px',
     position: 'relative'
   };
