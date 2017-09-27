@@ -1,7 +1,13 @@
 import React from 'react';
+import $ from 'jquery';
 
 export default function Menu(props) {
-  let toggle = props.toggle;
+  const handleMenuToggle = () => {
+    $('#menuToggle').toggleClass('active');
+    $('#root').toggleClass('body-push-toleft');
+    $('#theMenu').toggleClass('menu-open');
+  };
+
   return (
     <div data-spy="scroll" data-offset="0" data-target="#theMenu">
       <nav className="menu" id="theMenu">
@@ -9,7 +15,7 @@ export default function Menu(props) {
           <h1 className="logo">
             <a href="index.html#home">Design NOLA</a>
           </h1>
-          <i className="fa fa-times menu-close" onClick={toggle.menu} />
+          <i className="fa fa-times menu-close" onClick={handleMenuToggle} />
           <a href="#home" className="smoothScroll">
             Home
           </a>
@@ -38,7 +44,7 @@ export default function Menu(props) {
             <i className="fa fa-envelope" />
           </a>
         </div>
-        <div id="menuToggle" onClick={toggle.menu}>
+        <div id="menuToggle" onClick={handleMenuToggle}>
           <i className="fa fa-bars fa-2x fa-fw" />
         </div>
       </nav>
