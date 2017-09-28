@@ -1,11 +1,19 @@
 import React from 'react';
-import { Grid, Row, Col, Image, Thumbnail } from 'react-bootstrap';
+import {
+  Grid,
+  Row,
+  Col,
+  Thumbnail,
+  Button,
+  ButtonToolbar
+} from 'react-bootstrap';
 import port01 from './assets/img/portfolio/calculator-screenshot.png';
 import port02 from './assets/img/portfolio/recipebox-screenshot.png';
 import port03 from './assets/img/portfolio/tictactoe-screenshot.png';
 import port04 from './assets/img/portfolio/wiki-viewer-screenshot.png';
 import port05 from './assets/img/portfolio/quote-machine-screenshot.png';
 import port06 from './assets/img/portfolio/simon-screenshot.png';
+import port07 from './assets/img/portfolio/pomodoro-screenshot.png';
 
 export default function Portfolio(props) {
   const dummySentences = [
@@ -22,117 +30,88 @@ export default function Portfolio(props) {
     'Nam vestibulum accumsan nisl.'
   ];
 
+  const colStyle = {
+    marginTop: '25px'
+  };
+
+  const works = [
+    {
+      name: 'calculator',
+      img: port01,
+      url: 'http://pahosler.com/calculator/',
+      src: 'https://github.com/pahosler/freecodecamp/tree/master/www/calculator'
+    },
+    {
+      name: 'recipe box',
+      img: port02,
+      url: 'https://pahosler.github.io/recipebox/',
+      src: 'https://github.com/pahosler/recipebox'
+    },
+    {
+      name: 'tic tac toe',
+      img: port03,
+      url: 'http://pahosler.com/tictactoe/',
+      src: 'https://github.com/pahosler/freecodecamp/tree/master/www/tictactoe'
+    },
+    {
+      name: 'wiki viewer',
+      img: port04,
+      url: 'http://pahosler.com/wikiviewer/',
+      src: 'https://github.com/pahosler/freecodecamp/tree/master/www/wikiviewer'
+    },
+    {
+      name: 'quote machine',
+      img: port05,
+      url: 'http://pahosler.com/quotemachine/',
+      src:
+        'https://github.com/pahosler/freecodecamp/tree/master/www/quotemachine'
+    },
+    {
+      name: 'simon',
+      img: port06,
+      url: 'http://pahosler.com/simon/',
+      src: 'https://github.com/pahosler/freecodecamp/tree/master/www/Simon'
+    },
+    {
+      name: 'pomodoro',
+      img: port07,
+      url: 'http://pahosler.com/pomodoro/',
+      src: 'https://github.com/pahosler/freecodecamp/tree/master/www/pomodoro'
+    }
+  ];
+
+  const ShowWork = works.map(data => (
+    <Col lg={4} md={4} sm={4} xs={12} style={colStyle}>
+      <Thumbnail src={data.img} alt="242x200">
+        <h3>{data.name.toUpperCase()}</h3>
+        <p>Cool Project</p>
+        <p>
+          <ButtonToolbar>
+            <Button
+              bsStyle="danger"
+              bsSize="xs"
+              href={data.url}
+              target="_blank"
+            >
+              Run
+            </Button>
+            <Button bsStyle="info" bsSize="xs" href={data.src} target="_blank">
+              Source
+            </Button>
+          </ButtonToolbar>
+        </p>
+      </Thumbnail>
+    </Col>
+  ));
+
+  console.log(ShowWork);
+
   return (
     <div>
       <section id="portfolio" name="portfolio" />
       <div id="portfoliowrap">
         <Grid>
-          <Row>
-            <h1>SOME OF MY LATEST WORKS</h1>
-
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="https://pahosler.com/wikiviewer"
-                      target="_blank"
-                    >
-                      <Image src={port04} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="http://pahosler.com/quotemachine"
-                      target="_blank"
-                    >
-                      <Image src={port05} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="https://pahosler.com/simon"
-                      target="_blank"
-                    >
-                      <Image src={port06} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-          </Row>
-
-          <Row className="mt">
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="https://pahosler.com/calulator"
-                      target="_blank"
-                    >
-                      <Image src={port01} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="assets/img/portfolio/port02.jpg"
-                    >
-                      <Image src={port02} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-
-            <Col lg={4} md={4} sm={4} xs={12} className="desc">
-              <div className="project-wrapper">
-                <div className="project">
-                  <div className="photo">
-                    <a
-                      className="fancybox"
-                      href="https://pahosler.com/tictactoe"
-                      target="_blank"
-                    >
-                      <Image src={port03} alt="" responsive />
-                    </a>
-                  </div>
-                  <div className="overlay>" />
-                </div>
-              </div>
-            </Col>
-          </Row>
+          <Row>{ShowWork}</Row>
         </Grid>
 
         <Grid>

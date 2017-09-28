@@ -124,7 +124,11 @@ class Contact extends Component {
                     <HelpBlock>
                       <p>
                         Powered by{' '}
-                        <a href="https://postmail.invotes.com" target="_blank">
+                        <a
+                          href="https://postmail.invotes.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           PostMail
                         </a>
                       </p>

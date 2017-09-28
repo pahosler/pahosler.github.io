@@ -31,13 +31,25 @@ export default function Menu(props) {
           <a href="#contact" className="smoothScroll">
             Contact
           </a>
-          <a href="https://facebook.com/pahosler67" target="_blank">
+          <a
+            href="https://facebook.com/pahosler67"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa fa-facebook" />
           </a>
-          <a href="https://twitter.com/pahosler" target="_blank">
+          <a
+            href="https://twitter.com/pahosler"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa fa-twitter" />
           </a>
-          <a href="https://github.com/pahosler" target="_blank">
+          <a
+            href="https://github.com/pahosler"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fa fa-github" />
           </a>
           <a href="#contact">

@@ -17,21 +17,25 @@ export default function About(props) {
     'Nam vestibulum accumsan nisl.'
   ];
 
+  const imgStyle = {
+    margin: '0 auto'
+  };
+
   return (
     <div>
       <section id="about" name="about" />
       <div id="aboutwrap">
         <Grid>
           <Row>
-            <Col lg={4} className="name">
-              <Image src={myphoto} responsive />
+            <Col lg={2} className="name">
+              <Image style={imgStyle} src={myphoto} width={250} responsive />
               <p>Paul Hosler</p>
               <div className="name-label" />
             </Col>
             <Col lg={8} className="name-desc">
               <h2>
-                TALENTED DESIGNER<br />FRONT-END DEVELOPER<br />LIVING THE DREAM
-                IN NEW ORLEANS
+                TALENTED DESIGNER &<br />FRONT-END DEVELOPER<br />LIVING THE
+                DREAM IN NEW ORLEANS
               </h2>
               <div className="name-zig" />
               <Col md={6}>{dummySentences.slice(0, 4).join(' ')}</Col>
