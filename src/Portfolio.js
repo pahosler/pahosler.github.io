@@ -80,38 +80,40 @@ export default function Portfolio(props) {
     }
   ];
 
-  const ShowWork = works.map(data => (
+  const ShowWork = props => (
     <Col lg={4} md={4} sm={4} xs={12} style={colStyle}>
-      <Thumbnail src={data.img} alt="242x200">
-        <h3>{data.name.toUpperCase()}</h3>
+      <Thumbnail src={props.thumb.img} bsSize="small" alt="242x200">
+        <h3>{props.thumb.name.toUpperCase()}</h3>
         <p>Cool Project</p>
-        <p>
-          <ButtonToolbar>
-            <Button
-              bsStyle="danger"
-              bsSize="xs"
-              href={data.url}
-              target="_blank"
-            >
-              Run
-            </Button>
-            <Button bsStyle="info" bsSize="xs" href={data.src} target="_blank">
-              Source
-            </Button>
-          </ButtonToolbar>
-        </p>
+
+        <ButtonToolbar>
+          <Button
+            bsStyle="danger"
+            bsSize="xs"
+            href={props.thumb.url}
+            target="_blank"
+          >
+            Run
+          </Button>
+          <Button
+            bsStyle="info"
+            bsSize="xs"
+            href={props.thumb.src}
+            target="_blank"
+          >
+            Source
+          </Button>
+        </ButtonToolbar>
       </Thumbnail>
     </Col>
-  ));
-
-  console.log(ShowWork);
+  );
 
   return (
     <div>
       <section id="portfolio" name="portfolio" />
       <div id="portfoliowrap">
         <Grid>
-          <Row>{ShowWork}</Row>
+          <Row>{works.map((data, i) => <ShowWork key={i} thumb={data} />)}</Row>
         </Grid>
 
         <Grid>
