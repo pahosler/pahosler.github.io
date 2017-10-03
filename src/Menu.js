@@ -36,24 +36,24 @@ export default function Menu(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-facebook" />
+            <i className="fa fa-facebook fa-lg" />
           </a>
           <a
             href="https://twitter.com/pahosler"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-twitter" />
+            <i className="fa fa-twitter fa-lg" />
           </a>
           <a
-            href="https://github.com/pahosler"
+            href="https://github.com/pahosler/pahosler.github.io"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-github" />
+            <i className="fa fa-github fa-lg" />
           </a>
           <a href="#contact">
-            <i className="fa fa-envelope" />
+            <i className="fa fa-envelope fa-lg" />
           </a>
         </div>
         <div id="menuToggle" onClick={handleMenuToggle}>

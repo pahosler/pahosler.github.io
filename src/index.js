@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './assets/css/style.css';
 import './assets/css/font-awesome.min.css';
-import './assets/js/fancybox/jquery.fancybox.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

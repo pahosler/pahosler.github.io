@@ -2,19 +2,11 @@ import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 export default function Services(props) {
-  const dummySentences = [
-    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    'Donec hendrerit tempor tellus.',
-    'Donec pretium posuere tellus.',
-    'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.',
-    'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-    'Nulla posuere.',
-    'Donec vitae dolor.',
-    'Nullam tristique diam non turpis.',
-    'Cras placerat accumsan nulla.',
-    'Nullam rutrum.',
-    'Nam vestibulum accumsan nisl.'
-  ];
+  const textStyle = {
+    color: '#767676',
+    textAlign: 'justify',
+    lineHeight: '17px'
+  };
 
   return (
     <div>
@@ -25,7 +17,10 @@ export default function Services(props) {
             <Col lg={8} lgOffset={2} className="centered">
               <h1>AN OVERVIEW OF MY SERVICES</h1>
               <h3>I do all the work for you</h3>
-              <p>{dummySentences.splice(0, 1)}</p>
+              <p>
+                Your time is valuable. I take care of everything, so you don't
+                have to.
+              </p>
             </Col>
           </Row>
 
@@ -34,68 +29,45 @@ export default function Services(props) {
               <i className="fa fa-star" />
               <p>
                 PERMIUM QUALITY<br />
-                <small>LOREM IPSUM DOLOR</small>
+                <small>GRAPHICS, CONTENT & CODE</small>
               </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
+              <p style={textStyle}>
+                High definition, premium graphics. Professionally written
+                content. Secure, fast, web tested code.
+              </p>
             </Col>
             <Col lg={3} className="service">
               <i className="fa fa-cloud" />
               <p>
                 CLOUD SERVICES<br />
-                <small>LOREM IPSUM DOLOR</small>
+                <small>HEROKU, DOCKER, & AWS</small>
               </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
-            </Col>
-            <Col lg={3} className="service">
-              <i className="fa fa-shield" />
-              <p>
-                SECURED ACCOUNTS<br />
-                <small>LOREM IPSUM DOLOR</small>
+              <p style={textStyle}>
+                Your web apps deployed to the cloud. Flat rates available,
+                please contact me for more information.
               </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
-            </Col>
-            <Col lg={3} className="service">
-              <i className="fa fa-heart" />
-              <p>
-                100% SATISFACTION<br />
-                <small>LOREM IPSUM DOLOR</small>
-              </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
-            </Col>
-          </Row>
-
-          <Row className="mt">
-            <Col lg={3} className="service">
-              <i className="fa fa-trophy" />
-              <p>
-                PERMIUM QUALITY<br />
-                <small>LOREM IPSUM DOLOR</small>
-              </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
-            </Col>
-            <Col lg={3} className="service">
-              <i className="fa fa-globe" />
-              <p>
-                CLOUD SERVICES<br />
-                <small>LOREM IPSUM DOLOR</small>
-              </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
             </Col>
             <Col lg={3} className="service">
               <i className="fa fa-lock" />
               <p>
                 SECURED ACCOUNTS<br />
-                <small>LOREM IPSUM DOLOR</small>
+                <small>VERIFIED HTTPS CERTIFICATES</small>
               </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
+              <p style={textStyle}>
+                All hosting accounts provided and set up by me are HTTPS
+                enabled. Contact me to find out why this is important.
+              </p>
             </Col>
             <Col lg={3} className="service">
               <i className="fa fa-thumbs-up" />
               <p>
                 100% SATISFACTION<br />
-                <small>LOREM IPSUM DOLOR</small>
+                <small>NO HASSLE GUARANTEE</small>
               </p>
-              <p className="text">{dummySentences.splice(0, 1)}</p>
+              <p style={textStyle}>
+                It's your webpage, if you don't like any of my design choices, I
+                will fix them at no additional cost!
+              </p>
             </Col>
           </Row>
         </Grid>

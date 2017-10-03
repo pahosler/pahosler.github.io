@@ -3,14 +3,15 @@ import backgroundImg from './assets/img/new-orleans-creole-queen.jpg';
 
 export default function ContactSeparator(props) {
   const sep = {
-    background: `url(${backgroundImg}`,
+    background: `url(${backgroundImg})`,
     backgroundAttachment: 'fixed',
     backgroundPosition: '50% 0',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     height: '450px',
     position: 'relative',
-    WebkitFilter: 'grayscale(100%',
+    MozFilter: 'grayscale(100%)',
+    WebkitFilter: 'grayscale(100%)',
     filter: 'grayscale(100%)'
   };
 

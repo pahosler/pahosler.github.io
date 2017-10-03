@@ -5,18 +5,43 @@ import t2 from './assets/img/pic-t2.jpg';
 import t3 from './assets/img/pic-t3.jpg';
 
 export default function Testimonials(props) {
-  const dummySentences = [
-    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    'Donec hendrerit tempor tellus.',
-    'Donec pretium posuere tellus.',
-    'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.',
-    'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-    'Nulla posuere.',
-    'Donec vitae dolor.',
-    'Nullam tristique diam non turpis.',
-    'Cras placerat accumsan nulla.',
-    'Nullam rutrum.',
-    'Nam vestibulum accumsan nisl.'
+  const textBox = {
+    textAlign: 'center'
+  };
+
+  const testimonials = [
+    {
+      name: 'DAVID ROY',
+      img: t1,
+      quote: [
+        'Paul really helped us out!',
+        'He had no problem at all handling some last minute changes we threw at him.',
+        'I think he may be the first person that actually listened to our ideas,',
+        'and then put the time and effort into actually implementing them.',
+        'Best of all he seems to really enjoy what he is doing!'
+      ]
+    },
+    {
+      name: 'ALLAN MACARTY',
+      img: t2,
+      quote: [
+        'Thank you for the great ideas. Your attention to detail was phenominal and',
+        'you hit every request on point. Would I use your services again? Absolutely',
+        'yes. I have paid much more for a lot less work.',
+        'You are really easy to work with and will definitely go the extra mile.'
+      ]
+    },
+    {
+      name: 'TAMMY WATTS',
+      img: t3,
+      quote: [
+        'As an indie author on a tight budget you can probably imagine the difficulty',
+        'finding someone who can turn your vision into reality. I needed a simple,',
+        'professional, and good looking landing page to showcase a few of my recent titles.',
+        'Paul did a fantastic job and made sure',
+        'I was satisfied with the end results.'
+      ]
+    }
   ];
 
   return (
@@ -27,28 +52,30 @@ export default function Testimonials(props) {
             <Carousel defaultActiveIndex={0} controls={false}>
               <Carousel.Item>
                 <div className="mb centered">
-                  <h3>MARK WEBBER</h3>
-                  <p>{dummySentences.slice(0, 5).join(' ')}</p>
+                  <h3>{testimonials[0].name}</h3>
+                  <p style={textBox}>
+                    {testimonials[0].quote.slice(0, 5).join(' ')}
+                  </p>
                   <p>
                     <Image circle src={t1} width={80} />
                   </p>
                 </div>
               </Carousel.Item>
-
               <Carousel.Item>
                 <div className="mb centered">
-                  <h3>PAUL LEVINGSTON</h3>
-                  <p>{dummySentences.slice(0, 5).join(' ')}</p>
+                  <h3>{testimonials[1].name}</h3>
+                  <p style={textBox}>
+                    {testimonials[1].quote.slice(0, 5).join(' ')}
+                  </p>
                   <p>
                     <Image circle src={t2} width={80} />
                   </p>
                 </div>
               </Carousel.Item>
-
               <Carousel.Item>
                 <div className="mb centered">
-                  <h3>LUCY LENNIN</h3>
-                  <p>{dummySentences.slice(0, 5).join(' ')}</p>
+                  <h3>{testimonials[2].name}</h3>
+                  <p>{testimonials[2].quote.slice(0, 5).join(' ')}</p>
                   <p>
                     <Image circle src={t3} width={80} />
                   </p>

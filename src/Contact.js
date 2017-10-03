@@ -12,16 +12,12 @@ import {
 import $ from 'jquery';
 
 const data = {
-  access_token: 'g81t0kwltped8rlnywleaxzt'
+  access_token: 'gfqdvqp7s6jh3pqtcqrqqapl'
 };
-
-const onSuccess = () => {
-  console.log('Sent!');
-};
-const onError = () => {
-  console.log('Not... sent');
-};
+const onSuccess = () => true;
+const onError = () => false;
 const send = mailForm => {
+  $('#send').val('Sending...');
   data['subject'] = 'message from portfolio';
   data['text'] = `${mailForm.email} ${mailForm.name} ${mailForm.message}`;
 
@@ -35,7 +31,8 @@ class Contact extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      buttonTxt: 'Send'
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,30 +49,17 @@ class Contact extends Component {
   }
 
   handleSubmit() {
-    console.log(this.state.email);
     let mailForm = {
       email: this.state.email,
       message: this.state.message,
       name: this.state.name
     };
-    console.log('the mail is..', mailForm);
+    this.setState({ buttonTxt: 'Sending...' });
     send(mailForm);
+    this.setState({ buttonTxt: 'Sent' });
   }
 
   render() {
-    const dummySentences = [
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-      'Donec hendrerit tempor tellus.',
-      'Donec pretium posuere tellus.',
-      'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.',
-      'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      'Nulla posuere.',
-      'Donec vitae dolor.',
-      'Nullam tristique diam non turpis.',
-      'Cras placerat accumsan nulla.',
-      'Nullam rutrum.',
-      'Nam vestibulum accumsan nisl.'
-    ];
     return (
       <div>
         <section id="contact" name="contact" />
@@ -84,7 +68,7 @@ class Contact extends Component {
             <Row>
               <Col lg={6}>
                 <p>CONTACT ME TODAY</p>
-                <p>{dummySentences.slice(3, 0).join(' ')}</p>
+                <p>Paul Hosler</p>
                 <p>
                   <small>New Orleans, LA</small>
                 </p>
@@ -134,8 +118,8 @@ class Contact extends Component {
                       </p>
                     </HelpBlock>
                   </FormGroup>
-                  <Button componentClass="submit" onClick={this.handleSubmit}>
-                    Submit
+                  <Button id="send" onClick={this.handleSubmit}>
+                    {this.state.buttonTxt}
                   </Button>
                 </form>
               </Col>
