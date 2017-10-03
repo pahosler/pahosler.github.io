@@ -32,7 +32,7 @@ export default function Portfolio(props) {
       url: 'http://pahosler.com/calculator/',
       src:
         'https://github.com/pahosler/freecodecamp/tree/master/www/calculator',
-      desc: 'Using custom sprite sheets edited with gimp'
+      desc: 'Custom sprite sheets edited with gimp'
     },
     {
       name: 'recipe box',
