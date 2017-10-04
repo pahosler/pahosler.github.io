@@ -81,7 +81,7 @@ export default function Portfolio(props) {
     {
       name: 'Portfolio Page',
       img: port08,
-      url: '#home',
+      url: '#',
       src: 'https://github.com/pahosler/pahosler.github.io',
       desc: 'This portfolio page'
     }
@@ -122,7 +122,8 @@ export default function Portfolio(props) {
         <Grid>
           <Row>{works.map((data, i) => <ShowWork key={i} thumb={data} />)}</Row>
         </Grid>
-
+      </div>
+      <div id="portfoliowrap">
         <Grid>
           <Row className="mt centered">
             <h1>MY DESIGN PROCESS</h1>

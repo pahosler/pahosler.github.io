@@ -5,7 +5,7 @@ export default function PortfolioSeparator(props) {
   const sep = {
     background: `url(${backgroundImg})`,
     backgroundAttachment: 'fixed',
-    backgroundPosition: '50% 0',
+    backgroundPosition: '50% 0 !important',
     backgroundRepeat: 'no-repeat',
     width: '100%',
     height: '450px',
