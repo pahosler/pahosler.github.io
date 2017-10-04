@@ -149,7 +149,7 @@ export default function Portfolio(props) {
               </p>
             </Col>
             <Col lg={4} className="proc">
-              <i className="fa fa-heart" />
+              <i className="fa fa-trophy" />
               <h3>The Product</h3>
               <p style={textStyle}>
                 Your webpage is a reflection of you and your business. You won't

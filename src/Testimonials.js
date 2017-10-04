@@ -16,9 +16,9 @@ export default function Testimonials(props) {
       quote: [
         'Paul really helped us out!',
         'He had no problem at all handling some last minute changes we threw at him.',
-        'I think he may be the first person that actually listened to our ideas,',
-        'and then put the time and effort into actually implementing them.',
-        'Best of all he seems to really enjoy what he is doing!'
+        'I think he may be the first person who actually listened to our ideas,',
+        'and then put the time and effort into implementing them.',
+        "Best of all he seems to really enjoy what he's doing!"
       ]
     },
     {
@@ -28,7 +28,7 @@ export default function Testimonials(props) {
         'Thank you for the great ideas. Your attention to detail was phenominal and',
         'you hit every request on point. Would I use your services again? Absolutely',
         'yes. I have paid much more for a lot less work.',
-        'You are really easy to work with and will definitely go the extra mile.'
+        "You're easy to work with and you definitely go the extra mile."
       ]
     },
     {
@@ -39,7 +39,7 @@ export default function Testimonials(props) {
         'finding someone who can turn your vision into reality. I needed a simple,',
         'professional, and good looking landing page to showcase a few of my recent titles.',
         'Paul did a fantastic job and made sure',
-        'I was satisfied with the end results.'
+        'I was very happy with the end results.'
       ]
     }
   ];
