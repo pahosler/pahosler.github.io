@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import smoothScroll from './smooth-scroll.js';
 
 export default function Menu(props) {
   const handleMenuToggle = () => {
@@ -16,19 +17,23 @@ export default function Menu(props) {
             <a href="index.html#home">Design NOLA</a>
           </h1>
           <i className="fa fa-times menu-close" onClick={handleMenuToggle} />
-          <a href="#home" className="smoothScroll">
+          <a href="#home" onClick={smoothScroll.bind(this)}>
             Home
           </a>
-          <a href="#about" className="smoothScroll">
+          <a href="#about" name="about" onClick={smoothScroll.bind(this)}>
             About
           </a>
-          <a href="#portfolio" className="smoothScroll">
+          <a
+            href="#portfolio"
+            name="portfolio"
+            onClick={smoothScroll.bind(this)}
+          >
             Portfolio
           </a>
-          <a href="#services" className="smoothScroll">
+          <a href="#services" onClick={smoothScroll.bind(this)}>
             Services
           </a>
-          <a href="#contact" className="smoothScroll">
+          <a href="#contact" onClick={smoothScroll.bind(this)}>
             Contact
           </a>
           <a
@@ -52,8 +57,12 @@ export default function Menu(props) {
           >
             <i className="fa fa-github fa-lg" />
           </a>
-          <a href="#contact">
-            <i className="fa fa-envelope fa-lg" />
+          <a
+            href="https://www.linkedin.com/in/pahosler/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-linkedin fa-lg" />
           </a>
         </div>
         <div id="menuToggle" onClick={handleMenuToggle}>
