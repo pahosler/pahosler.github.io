@@ -14,7 +14,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Lato');
-
 html,
 button,
 input,
@@ -72,7 +71,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #000;
-
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
@@ -158,8 +156,7 @@ h6 {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  width: 25px;
-  //font-size: 16px;
+  width: 25px; //font-size: 16px;
   line-height: 40px;
   margin: 25px 2px;
 }
@@ -192,6 +189,7 @@ h6 {
 }
 
 /* Push the body after clicking the menu button */
+
 .body-push {
   overflow-x: hidden;
   position: relative;
@@ -251,6 +249,7 @@ h6 {
    ========================================================================== */
 
 /* About Wrap & Conf */
+
 #aboutwrap {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -259,6 +258,7 @@ h6 {
 .name {
   text-align: center;
 }
+
 .name p {
   font-size: 22px;
   font-weight: lighter;
@@ -270,16 +270,14 @@ h6 {
   width: 60px;
   height: 60px;
   margin: 0 auto 45px;
-  border-top: 1px solid #000;
-  //background: url(../img/name-label.png) center bottom no-repeat;
+  border-top: 1px solid #000; //background: url(../img/name-label.png) center bottom no-repeat;
   background-size: 35px 35px;
 }
 
 .name-zig {
   width: 73px;
   height: 17px;
-  margin: 38px 0 38px;
-  //	background: url(../img/name-zig.png) 0 0 no-repeat;
+  margin: 38px 0 38px; //	background: url(../img/name-zig.png) 0 0 no-repeat;
   background-size: 73px 17px;
 }
 
@@ -294,6 +292,7 @@ h6 {
 /* Separator About - Parallax Section */
 
 /* Portfolio Wrap Section */
+
 #portfoliowrap {
   display: block;
   margin-top: 80px;
@@ -305,6 +304,7 @@ h6 {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .mt {
   margin-top: 50px;
 }
@@ -329,6 +329,7 @@ h6 {
 */
 
 /* Service Wrap */
+
 #servicewrap {
   display: block;
   margin-top: 80px;
@@ -362,6 +363,7 @@ h6 {
 }
 
 /* Testimonials Wrap */
+
 #testimonials {
   display: block;
   margin-top: 80px;
@@ -370,6 +372,7 @@ h6 {
 }
 
 /* Contact Wrap */
+
 #contactwrap {
   background-color: #2f2f2f;
   margin-top: 0px;
@@ -391,6 +394,7 @@ h6 {
 }
 
 /* Gallery Configuration */
+
 .photo-wrapper {
   display: block;
   position: relative;
@@ -401,6 +405,7 @@ h6 {
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
 }
+
 .project .overlay {
   position: absolute;
   text-align: center;
@@ -424,12 +429,14 @@ h6 {
   right: 0;
   position: relative;
 }
+
 .project:hover .photo {
   opacity: 10;
   filter: alpha(opacity=4000);
   opacity: 0.1;
   filter: alpha(opacity=40);
 }
+
 .project:hover .overlay {
   opacity: 100;
   filter: alpha(opacity=10000);

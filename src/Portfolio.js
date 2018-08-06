@@ -15,6 +15,7 @@ import port05 from './assets/img/portfolio/quote-machine-screenshot.png';
 import port06 from './assets/img/portfolio/simon-screenshot.png';
 import port07 from './assets/img/portfolio/pomodoro-screenshot.png';
 import port08 from './assets/img/new-orleans-night-3.jpg';
+import port09 from './assets/img/portfolio/hurriup-org-screenshot.png';
 
 export default function Portfolio(props) {
   const colStyle = {
@@ -26,6 +27,13 @@ export default function Portfolio(props) {
   };
 
   const works = [
+    {
+      name: 'hurriup.org',
+      img: port09,
+      url: 'http://hurriup.org',
+      src: '',
+      desc: 'Custom Landing Page'
+    },
     {
       name: 'calculator',
       img: port01,
@@ -89,7 +97,12 @@ export default function Portfolio(props) {
 
   const ShowWork = props => (
     <Col lg={4} md={4} sm={4} xs={12} style={colStyle}>
-      <Thumbnail src={props.thumb.img} bsSize="small" alt="Placeholder 242x200">
+      <Thumbnail
+        className="thumbs"
+        src={props.thumb.img}
+        bsSize="small"
+        alt="Placeholder 242x200"
+      >
         <h3>{props.thumb.name.toUpperCase()}</h3>
         <p>{props.thumb.desc}</p>
 
@@ -120,7 +133,11 @@ export default function Portfolio(props) {
       <section id="portfolio" name="portfolio" />
       <div id="portfoliowrap">
         <Grid>
-          <Row>{works.map((data, i) => <ShowWork key={i} thumb={data} />)}</Row>
+          <Row>
+            {works.map((data, i) => (
+              <ShowWork key={i} thumb={data} />
+            ))}
+          </Row>
         </Grid>
       </div>
       <div id="portfoliowrap">
